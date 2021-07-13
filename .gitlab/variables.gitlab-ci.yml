@@ -1,0 +1,5 @@
+variables:
+  MY_NAME: "Miss Nikita Sah"
+  MY_AGE: "21 years young"
+  ENV: "non-production"
+  DEPLOY_VARIABLE: "somevalue"

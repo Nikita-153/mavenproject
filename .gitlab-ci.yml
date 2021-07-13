@@ -1,0 +1,23 @@
+stages:
+  - my-setup
+  - my-build  
+  - my-test
+
+variables:
+  DEPLOY_ON: "STG"
+
+
+workflow:
+  rules:
+    - if: '$DEPLOY_ON == "STG"'
+      variables:
+        DEPLOY_VARIABLE: "non-production"  # Override globally-defined DEPLOY_VARIABLE                     
+    - when: never                            # Run the pipeline in other cases
+ 
+
+
+
+include:
+  - local: .gitlab/*.gitlab-ci.yml
+
+

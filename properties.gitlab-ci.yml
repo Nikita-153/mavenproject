@@ -1,0 +1,4 @@
+variables:
+  PROD: "true"
+  NON_PROD: "true"
+  STG: "true"

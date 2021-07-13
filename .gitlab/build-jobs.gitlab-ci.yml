@@ -1,0 +1,6 @@
+build-code-job:
+  stage: my-build
+  # needs: ["setup-job1"]  
+  script:
+    - echo "Build job is executing Babbes DEPLOY_VARIABLE = $DEPLOY_VARIABLE"
+

@@ -1,0 +1,31 @@
+# setup-job:
+#   stage: my-setup
+#   script:
+#     - echo "This is confidential $MY_NAME"
+#     - echo "This is confidential $MY_AGE"
+#     - echo "This is confidential $ENV"
+
+
+setup-job1:  
+  stage: my-setup  
+  script:
+    - echo "Set up - Job 1 executing"
+    - echo "Trying to access a variable $MY_NAME"
+    - echo "Before changing the global variable  $DEPLOY_VARIABLE"
+
+
+setup-job2:  
+  stage: my-setup  
+  rules:
+    - if: '$ENV == "non-production"'
+      variables:                                   
+        DEPLOY_VARIABLE: "setup-job2-deploy-on-non-production"  # Override DEPLOY_VARIABLE defined
+      when: never                             # Run the job in other cases
+  script:
+    - echo "It will execute if it is non prod  $DEPLOY_VARIABLE"
+  
+setup-job3:
+  stage: my-setup
+  script:
+    - echo "In setup-job3 value is -  $DEPLOY_VARIABLE"
+  

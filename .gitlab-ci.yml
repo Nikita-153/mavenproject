@@ -2,6 +2,9 @@ stages:
   - my-setup
   - my-build  
   - my-test
+  - try-build
+  - try-test
+  - try-deploy
 
 variables:
   DEPLOY_ON: "STG"

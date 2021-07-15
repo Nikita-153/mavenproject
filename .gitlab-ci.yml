@@ -20,7 +20,7 @@ workflow:
 
 include:
   - local: .gitlab/*.gitlab-ci.yml
-  - local: python-scripts/.gitlab-ci.yml
+  #- local: python-scripts/.gitlab-ci.yml
 
 
 

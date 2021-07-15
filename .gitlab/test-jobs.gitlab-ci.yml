@@ -1,4 +1,4 @@
-test-job:
+test-job1:
   stage: my-test
   script:
     - |
@@ -6,4 +6,10 @@ test-job:
      echo "This is confidential $MY_AGE"
      echo "This is confidential $ENV"
      python python-scripts/first.py
+     
+ 
+test-job2:
+  stage: my-test
+  script:
+    - echo "New job added"
      

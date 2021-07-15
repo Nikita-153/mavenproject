@@ -2,7 +2,14 @@ stages:
   - my-setup
   - my-build  
   - my-test
- 
+  - my-try
+
+
+my-try-job:
+  stage: my-try
+  script:
+    - echo "My try job"
+    
 
 variables:
   DEPLOY_ON: "STG"
